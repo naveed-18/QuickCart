@@ -2,20 +2,21 @@ package com.naveed18.quickcart.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cust_id")
     private int custId;
 
@@ -27,15 +28,4 @@ public class Customer {
 
     @Column(name = "cust_mobile")
     private String custMobile;
-
-    @ManyToOne
-    @JoinColumn(name="percentage")
-    private Coupon coupon;
-
-    public Customer(String custName, String custAddress, String custMobile, Coupon coupon) {
-        this.custName = custName;
-        this.custAddress = custAddress;
-        this.custMobile = custMobile;
-        this.coupon = coupon;
-    }
 }

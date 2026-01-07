@@ -14,6 +14,6 @@ public class Coupon {
     @Column(name = "percentage")
     private int percentage;
 
-    @Column(name = "discount")
-    private String discount;
+    @Column(name = "coupon_code")
+    private String couponCode;
 }
