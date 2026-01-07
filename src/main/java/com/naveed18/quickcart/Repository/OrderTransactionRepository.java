@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.naveed18.quickcart.Entity.OrderTransaction;
 
 public interface OrderTransactionRepository extends JpaRepository<OrderTransaction, String> {
-    public List<OrderTransaction> findByOrderId(int orderId);
+    public List<OrderTransaction> findByCustId(int custId);
+
 }
