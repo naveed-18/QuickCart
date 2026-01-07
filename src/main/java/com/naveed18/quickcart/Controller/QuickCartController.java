@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class QuickCartController {
     @GetMapping("/")
     public String homePage() {
-        return "HOME PAGE";
+        return "Welcome To QuickCart -- E-Commerce Backend System";
     }
     
 }
